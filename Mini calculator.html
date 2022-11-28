@@ -1,0 +1,132 @@
+<html>
+  <head>
+  <title>java script</title>
+  <style>
+  div{
+
+  background-color:grey;
+  }
+  </style>
+  
+  </head>
+  <script>
+  function promFun(){
+	var retVal1=parseInt(prompt("enter the number:","number  here"));
+	var retVal2=parseInt(prompt("enter the another number:","number  here"));
+	alert("Sum ="+(retVal1+retVal2));
+	}
+	
+   function age(){
+  let age=parseInt(document.getElementById("b").value);
+  if(age>18){
+		return document.getElementById("p1").innerHTML="you are eligible to vote";
+  }
+  else{
+		return document.getElementById("p1").innerHTML="you arenot eligible to vote";
+  
+  }
+  }
+  
+  function day(){
+  let day=parseInt(document.getElementById("a").value);
+  if(day==1){
+		return document.getElementById("p2").innerHTML="Sunday";
+	}
+  else if(day==2){
+		return document.getElementById("p2").innerHTML="Monday";
+	}
+   else if(day==3){
+		return document.getElementById("p2").innerHTML="Tuesday";
+	}
+  else if(day==4){
+		return document.getElementById("p2").innerHTML="Wednesday";
+	}
+  else if(day==5){
+		return document.getElementById("p2").innerHTML="Thursday";
+	}
+	else if(day==6){
+		return document.getElementById("p2").innerHTML="Friday";
+	}
+  
+	
+  else if(day==7){
+		return document.getElementById("p2").innerHTML="Saturday";
+	}
+ 
+	
+  else{
+		return document.getElementById("p2").innerHTML="enter valid day number";
+  
+	}
+  }
+  function addnum(){
+  var no1=parseInt(document.getElementById("b1").value);
+  var no2=parseInt(document.getElementById("b2").value);
+  var no3=no1+no2;
+  document.getElementById("b3").value=no3;
+  }
+   function subnum(){
+  var no1=parseInt(document.getElementById("b1").value);
+  var no2=parseInt(document.getElementById("b2").value);
+  var no3=no1-no2;
+  document.getElementById("b3").value=no3;
+  }
+   function multnum(){
+  var no1=parseInt(document.getElementById("b1").value);
+  var no2=parseInt(document.getElementById("b2").value);
+  var no3=no1*no2;
+  document.getElementById("b3").value=no3;
+  }
+   function divnum(){
+  var no1=parseInt(document.getElementById("b1").value);
+  var no2=parseInt(document.getElementById("b2").value);
+  var no3=no1/no2;
+  document.getElementById("b3").value=no3;
+  }
+  </script>
+  <body>
+  
+ 
+ <center> <form>
+  <fieldset>
+
+  <legend>calculator</legend>
+  <div>
+  <input type="text" id="b1" name="b1" placeholder="first number"><br>
+  <input type="text" id="b2" name="b2" placeholder="second number"><br>
+  <input type="text" id="b3" name="b3" placeholder="result"><br>
+  <input type="button" id="b7" value="add" onclick="addnum()">
+   <input type="button" id="b7" value="sub" onclick="subnum()">
+    <input type="button" id="b7" value="div" onclick="divnum()">
+  <input type="button" id="b7" value="mult" onclick="multnum()"><br>
+  <input id="b8" type="reset" value="Reset"/>
+  </div>
+  
+  </fieldset>
+  </form>
+  </center>
+ <form>
+ <fieldset>
+ <legend>age eligibility</legend>
+ <div>
+ <input type="text" id="b" name="b" placeholder="enter age"><br>
+ <input type="button" id="b7" value="enter" onclick="age()">
+ <p id="p1"></p>
+ </div>
+ </fieldset>
+ </form>
+ <form>
+ <fieldset>
+ <legend>day</legend>
+ <div>
+ <input type="text" id="a" name="a" placeholder="enter day"><br>
+ <input type="button" id="" value="enter" onclick="day()">
+ 
+ <p id="p2"></p>
+ </div>
+ </fieldset>
+ </form>
+  
+  <input type="button" id="h" value="enter" onclick="promFun()">
+  </body>
+  </html>
